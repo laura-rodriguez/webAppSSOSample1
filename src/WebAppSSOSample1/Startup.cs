@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Stormpath.AspNetCore;
 using Stormpath.Configuration.Abstractions;
+using Stormpath.SDK.Application;
 
 namespace WebAppSSOSample1
 {
@@ -47,8 +48,7 @@ namespace WebAppSSOSample1
                 }
             });
             // Add framework services.
-            services.AddApplicationInsightsTelemetry(Configuration);
-
+            services.AddApplicationInsightsTelemetry(Configuration);            
             services.AddMvc();
         }
 
